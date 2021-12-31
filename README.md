@@ -6,8 +6,20 @@
 It takes great pleasure to introduce you to the first project that we will make as a group. 
 This project will be a **retail ecommerce** store with the fundamentals, nothing too fancy. The webapp will be a full stack project using new technologies as we go. Since we are mostly front-end developers, that means that we will have alot of work on our hands.
 
+<br>
+
+## Content Table:
+- [Purpose of the project](#why-we-build-this-project).
+- [How to contribute](#contributing-to-the-repository).
+
+- [Technologies that will be uses](#technologies-that-will-be-used).
+- [Working as a group ](#working-as-a-group).
+
+<br>
+
+
 ## Why we build this project. 
-The main aim of this project is to allow the contributors to gain a firm understanding of how to work in group. Since many of us have varying levels of experience working on project, it would be best to know how to work with team members strengths and weaknesses. 
+The main aim of this project is to allow the contributors to gain a firm understanding of how to work in a group. Since many of us have varying levels of experience working on project, it would be best to know how to work with team members' strengths and weaknesses. 
 
 It is also important to note that the best way to learn is by doing. Experience is the greatest teacher and simply reading and doing simple snippets will not really prepare you for what is to come in the workforce. 
 
@@ -15,8 +27,41 @@ This project aims to build a full blown web app which means that the amount of t
 
 <br>
 
+## Contributing to the repository. 
+<br>
+
+### *Cloning the repository*
+First you would need a local copy of the repository to work on. This can be done by cloning the github repo using the command:
+<br>
+
+`git clone https://github.com/aldaineclarke/retailWebapp.git`
+
+<br>
+
+### *Installing the dependencies.*
+The following command will install the different dependencies necessary to run the project from the package.json file.
+<br>
+
+`npm install`
+
+<br>
+
+### *Running the project.*
+The project will be written in Typescript therefore the code needs to be transpiled before it can run properly. All the sourcefiles that are transpiled are stored in the `dist` folder in the root directory for now, and is subjected to change. Use the command: 
+
+`npm run build`
+
+in the command prompt to compile all the .ts files into that `dist` folder.
+
+<br>
+
+### *Making changes to the project.*
+Ensure that whatever changes you push to the project is done in the dev branch, **DO NOT PUSH TO THE MAIN BRANCH**. 
+
+<br>
+
 ## Technologies that will be used. 
-To make sure that we are using up to date technologies and tools I had planned to use a few well known technologies and the famous **MEAN** Stack with a little spin.
+To make sure that we are using up to date technologies and tools, we will be choosing the well known technologies and the famous **MEAN** Stack with a little spin.
 
 Some of these Technologies are: 
 
@@ -24,6 +69,7 @@ Some of these Technologies are:
 - [Express.js](https://expressjs.com/)
 - [Angular.js](https://angularjs.org/)/ [Angular 13*](https://angular.io/)
 - [Node.js](https://nodejs.org/)
+- [Typescipt](https://www.typescriptlang.org/docs/handbook)
   
 <br>
 
