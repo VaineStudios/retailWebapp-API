@@ -31,19 +31,11 @@ This project aims to build a full blown web app which means that the amount of t
 <br>
 
 ### *Cloning the repository*
-Cloning gives you access to the files on your local machine. In other words, it downloads a copy of the repository to your local machine. This is done by using the command:
+First you would need a local copy of the repository to work on. This can be done by cloning the github repo using the command:
 <br>
 
 `git clone https://github.com/aldaineclarke/retailWebapp.git`
 
-### *Forking the repository*
-Forking a repository allows you to create a copy of the repository to your github profile. It gives you ownership of that copied repository, it will not be affected, nor will it affect, the original repository. This is done by using the command: 
-<br>
-
- `git fork https://github.com/aldaineclarke/retailWebapp.git`
-<br>
-
-The main difference between a fork and the clone is that with fork you have a copy of the repository on your github profile, and you have to clone it to access it from your local machine. While to with clone you have the copy on your local machine.
 <br>
 
 ### *Installing the dependencies.*
@@ -67,22 +59,25 @@ in the command prompt. This will run nodemon which will automatically reload the
 <br>
 
 ### *Making changes to the project.*
-Ensure that whatever changes you push to the project is done through a branch of the dev branch. 
-
-#### Step by step of the process: 
+Ensure that whatever changes you push to the project is done in the dev branch, **DO NOT PUSH TO THE MAIN BRANCH**. If you already have a copy of the project on your local machine and you want to post your changes to the `dev` branch; you should first use the command: 
 <br>
 
-1. `git pull origin dev` which pulls down whatever changes are currently in the dev branch.
-2. `git branch feature-name` creates a branch called *feature-name* of the current state of the branch you are in. ***in vscode this is shown at the bottom left of the window***
-3. `git checkout feature-name` switches to the branch feature-name.
-4. make the changes you want to contribute to the repository.
-5. `git add .` adds all the changed files to the staging area for commit
-6. `git commit -m "created this commit"` creates a commit with the message *created this commit* .
-7. `git push origin feature-name` this will create a new branch in the remote repository(GitHub) with the name *feature-name*
-8. There will be a message on github which says **compare and pull request**, once you click there it will ask you to select where you would like to make the merge.
-9. Select the **dev** branch. This will prompt you to create a pull request to the dev branch. Done.
+`git pull origin`
 
-**DO NOT PUSH TO THE MAIN BRANCH**. 
+<br>
+
+
+This command will compare the data you have with the one that is on the remote server (GitHub). It will then say `you are up to date`. Then you can use the command:
+<br>
+
+`git push origin`
+
+<br>
+
+If it is not up to date then git will pull more recent changes to your local machine. Afterwhich you need to just commit the changes and push it to the remote server (GitHub).
+
+
+
 <br>
 
 ## Technologies that will be used. 
