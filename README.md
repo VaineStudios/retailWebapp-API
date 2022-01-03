@@ -47,16 +47,36 @@ The following command will install the different dependencies necessary to run t
 <br>
 
 ### *Running the project.*
-The project will be written in Typescript therefore the code needs to be transpiled before it can run properly. All the sourcefiles that are transpiled are stored in the `dist` folder in the root directory for now, and is subjected to change. Use the command: 
+To run the project you just need to use the command:  
+<br>
 
-`npm run build`
+`npm run devStart`
 
-in the command prompt to compile all the .ts files into that `dist` folder.
+<br>
+
+in the command prompt. This will run nodemon which will automatically reload the server whenever you make changes to the file.
 
 <br>
 
 ### *Making changes to the project.*
-Ensure that whatever changes you push to the project is done in the dev branch, **DO NOT PUSH TO THE MAIN BRANCH**. 
+Ensure that whatever changes you push to the project is done in the dev branch, **DO NOT PUSH TO THE MAIN BRANCH**. If you already have a copy of the project on your local machine and you want to post your changes to the `dev` branch; you should first use the command: 
+<br>
+
+`git pull origin`
+
+<br>
+
+
+This command will compare the data you have with the one that is on the remote server (GitHub). It will then say `you are up to date`. Then you can use the command:
+<br>
+
+`git push origin`
+
+<br>
+
+If it is not up to date then git will pull more recent changes to your local machine. Afterwhich you need to just commit the changes and push it to the remote server (GitHub).
+
+
 
 <br>
 
@@ -69,7 +89,6 @@ Some of these Technologies are:
 - [Express.js](https://expressjs.com/)
 - [Angular.js](https://angularjs.org/)/ [Angular 13*](https://angular.io/)
 - [Node.js](https://nodejs.org/)
-- [Typescipt](https://www.typescriptlang.org/docs/handbook)
   
 <br>
 
