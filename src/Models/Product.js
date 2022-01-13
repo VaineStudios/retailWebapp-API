@@ -1,21 +1,24 @@
-import { Schema, model } from "mongoose";
-const productImageSchema = new Schema({
+const mongoose = require("mongoose");
+const productImageSchema = new mongoose.Schema({
    image: { type: String, required: true },
    featured: { type: Boolean },
 });
-const productSchema = new Schema({
+const productSchema = new mongoose.Schema({
    name: { type: String, required: true },
    price: { type: Number, required: true },
    productType: { type: String, required: true },
    productImage: {
       productImageSchema,
-      required: true,
    },
    condition: { type: String, required: true },
    description: { type: String, required: true },
-   sellerId: { type: Schema.Types.ObjectId, ref: "User", required: true },
-   dateCreated: { type: Date, required: true, default: () => Date.now() },
+   sellerId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+   },
+   dateCreated: { type: Date, default: () => Date.now() },
    inventory: { type: Number, required: true },
 });
 
-export default model("Product", productSchema);
+module.exports = mongoose.model("Product", productSchema);

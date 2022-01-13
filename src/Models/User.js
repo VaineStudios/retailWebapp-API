@@ -1,6 +1,10 @@
-import { Schema, model } from "mongoose";
+const mongoose = require("mongoose");
 
-const userSchema = new Schema({
+const cartSchema = new mongoose.Schema({
+   orderItem: [{ type: mongoose.Schema.Types.ObjectId, ref: "Order" }],
+   totalCost: { type: Number, required: true },
+});
+const userSchema = new mongoose.Schema({
    fname: { type: String, required: true },
    lname: { type: String, required: true },
    username: { type: String, required: true },
@@ -8,8 +12,16 @@ const userSchema = new Schema({
    profileImg: { type: String, required: true },
    dateCreated: { type: Date, default: () => Date.now() },
    isSeller: { type: Boolean, required: true },
-   cartId: { type: Schema.Types.ObjectId, ref: "Cart", required: true },
-   orderNum: { type: Schema.Types.ObjectId, ref: "Order", required: true },
+   // cartId: {
+   //    type: mongoose.Schema.Types.ObjectId,
+   //    ref: "Cart",
+   //    required: true,
+   // },
+   cart: { type: cartSchema },
+   orderNum: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Order",
+   },
 });
 
-export default model("User", userSchema);
+module.exports = mongoose.model("User", userSchema);
