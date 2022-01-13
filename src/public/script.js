@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 const Product = require("./Product");
 const User = require("./User");
-
+require('dotenv').config() // configures node to attach the provided ".env" to the process object.
 mongoose.connect(
-   "mongodb+srv://admin:amber123@sunkentreasures.gsnv3.mongodb.net/SunkenTreasures?retryWrites=true&w=majority"
+   process.env.URI
 );
 //    .then(() => console.log("MongoDB Connected"))
 //    .catch((err) => console.log(err));
